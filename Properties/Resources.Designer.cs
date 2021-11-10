@@ -59,5 +59,15 @@ namespace Triangle_Rimitsen.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Regular_triangle_svg {
+            get {
+                object obj = ResourceManager.GetObject("Regular_triangle.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

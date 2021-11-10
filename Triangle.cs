@@ -9,12 +9,20 @@ namespace Triangle_Rimitsen
         public double a;// первая сторона
         public double b;// вторая сторона
         public double c;// третья сторона
+        public double h;// высота
+        public double alpha;//угол альфа
 
         public Triangle(double A, double B, double C)// Конструктор
         {
             a = A;// создаем с заданными длинами сторон согласно заданию
             b = B;
             c = C;
+            
+        }
+        public  Triangle(double A, double H)
+        {
+            a = A;
+            h = H;
         }
         public string outputA()
         {
@@ -41,6 +49,24 @@ namespace Triangle_Rimitsen
             p = (a + b + c) / 2;
             s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
             return s;
+        }
+        public double Surface_Ploshad()
+        {
+            double plos = 0;
+            plos = (a + h / 2);
+
+            return plos;
+
+        }
+
+        public double Vesota()
+        {
+            double ha = 0;
+            double s = 0;
+            s = (a + h / 2);
+            ha = (2 * s)/a;
+
+            return ha;
         }
 
         public double GetSetA
@@ -72,8 +98,22 @@ namespace Triangle_Rimitsen
             get
             {
                 if ((a > b + c) && (b > a + c) && (c > a + b))
-                    return false;
-                else return true;
+                    return true;
+                else return false;
+            }
+        }
+
+        public string TriangleType
+        {
+            get
+            {
+                if (a == b && a == c && b == c)
+                    return "это равносторонний";
+                else if (a == b || a == c || b == c)
+                    return "это равнобедренный";
+
+                else return "это разносторонний";
+
             }
         }
     }
