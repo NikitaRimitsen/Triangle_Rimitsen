@@ -30,7 +30,7 @@ namespace Triangle_Rimitsen
             listView1.Items.Add("Периметр");
             listView1.Items.Add("Площадь");
             listView1.Items.Add("Существует?");
-            listView1.Items.Add("Спецификатор");
+            listView1.Items.Add("Вид треугольника");
             listView1.Items[0].SubItems.Add(triangle.outputA());
             listView1.Items[1].SubItems.Add(triangle.outputB());
             listView1.Items[2].SubItems.Add(triangle.outputC());
@@ -38,6 +38,8 @@ namespace Triangle_Rimitsen
             listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Surface()));
             if (triangle.ExistTriange) { listView1.Items[5].SubItems.Add("Существует"); }
             else listView1.Items[5].SubItems.Add("Не существует");
+            listView1.Items[6].SubItems.Add(triangle.TriangleType);
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,6 +58,11 @@ namespace Triangle_Rimitsen
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

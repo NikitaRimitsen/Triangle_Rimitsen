@@ -19,6 +19,10 @@ namespace Triangle_Rimitsen
             c = C;
             
         }
+        public Triangle()
+        {
+
+        }
         public  Triangle(double A, double H)
         {
             a = A;
